@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>독립 외부 컨텐츠 iframe 반응형 처리하기_youtube</title>
+  <!-- Bootstrap v4.6.2 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <style>
+    .inner {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    #youtubeContent {
+      /* height를 없애고 padding 등을 넣어버리면 그 퍼센테이지를 너비를 기준으로 계산하게 됨 */
+      height: 0;
+      padding-top: 56%;
+      /* 영상 너비가 원래 화면의 56% */
+      /* height: 56vw; */
+    }
+    #youtubeContent iframe {
+      top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- 선생님 힌트 듣고 조금 고쳐봄 -->
+  <div class="container-xl">
+    <div class="row">
+      <div class="col-md-6 px-0">
+        <div id="youtubeContent" class=" position-relative">
+          <!-- iframe에 abs넣고 #youtubeContent에 rel 넣어서 abs가 rel에 들러붙게 => div조정으로 iframe 크기 조정 가능 -->
+          <iframe class="position-absolute" width="100%" src="https://www.youtube.com/embed/js1CtxSY38I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-6 px-0 bg-dark d-flex justify-content-center align-items-center">
+          <h2 class="text-white m-0">뉴진스의 New JEANS</h2>
+      </div>
+      <div class="col-md-6 px-0">
+        <div id="youtubeContent" class=" position-relative">
+          <!-- iframe에 abs넣고 #youtubeContent에 rel 넣어서 abs가 rel에 들러붙게 => div조정으로 iframe 크기 조정 가능 -->
+          <iframe class="position-absolute" width="100%" src="https://www.youtube.com/embed/js1CtxSY38I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="d-none d-md-block col-md-6 px-0 bg-dark d-md-flex justify-content-center align-items-center">
+          <h2 class="text-white m-0">뉴진스의 New JEANS</h2>
+      </div>
+      <div class="col-md-6 px-0">
+        <div id="youtubeContent" class=" position-relative">
+          <!-- iframe에 abs넣고 #youtubeContent에 rel 넣어서 abs가 rel에 들러붙게 => div조정으로 iframe 크기 조정 가능 -->
+          <iframe class="position-absolute" width="100%" src="https://www.youtube.com/embed/js1CtxSY38I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="d-none d-md-block col-md-6 px-0 bg-dark d-md-flex justify-content-center align-items-center">
+          <h2 class="text-white m-0">뉴진스의 New JEANS</h2>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
