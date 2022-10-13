@@ -25,10 +25,17 @@
   </style>
 </head>
 <body>
-  <div class="inner">
-    <div id="youtubeContent" class="position-relative">
-      <!-- iframe에 abs넣고 #youtubeContent에 rel 넣어서 abs가 rel에 들러붙게 => div조정으로 iframe 크기 조정 가능 -->
-      <iframe class="position-absolute" width="100%" src="https://www.youtube.com/embed/js1CtxSY38I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="row">
+    <div class="col-md-6 px-0">
+      <div id="youtubeContent" class=" position-relative">
+        <!-- iframe에 abs넣고 #youtubeContent에 rel 넣어서 abs가 rel에 들러붙게 => div조정으로 iframe 크기 조정 가능 -->
+        <iframe class="position-absolute" width="100%" src="https://www.youtube.com/embed/js1CtxSY38I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-md-6 px-0 bg-dark">
+      <div class="d-flex h-100 justify-content-center align-items-center">
+        <h2 class="text-white text-center m-0">가고 싶은 내고향 6</h2>
+      </div>
     </div>
   </div>
 </body>
